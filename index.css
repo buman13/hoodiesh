@@ -1,0 +1,849 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+section header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 20px rgb(46, 45, 45);
+    width: 100%;
+}
+section header .logo{
+    color: black;
+font-size: 40px;
+font-weight: bold;
+text-decoration: none;
+margin: 15px 0;
+right: 30%;
+}
+
+section header .logo span{
+    color: brown;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+nav ul li a{
+    display: block;
+    margin: 0 10px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    width: 0;
+    height: 2.5px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover::before{
+    width: 100%;
+}
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 146, 146);
+    clip-path: circle(320px at left -230px);
+    z-index: -1;
+}
+
+
+section .texts h1{
+  letter-spacing: 0.1px;
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    font-size: 50px;
+    color: rgb(40, 39, 39);
+
+}
+section .texts h2{
+  letter-spacing: 0.1px;
+  position: absolute;
+  color: brown;
+  font-size: 30px;
+  top: 38%;
+  left: 10%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards; 
+}
+section .texts h1 span{
+    color: brown;
+}
+
+section p{
+    width: 650px;
+    position: absolute;
+    top: 45%;
+    left: 4%;
+    line-height: 26px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards; 
+}
+section .mahmoud img{
+width :900px ;   
+
+position: absolute;
+top: 10%;
+left:25%; 
+margin-left: 25px;
+opacity: 0;
+animation: fadeIn 1s ease-in-out forwards; 
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.button {
+    width: 180px;
+    height: 40px;
+    background-image: linear-gradient(rgb(214, 202, 254), rgb(158, 129, 254));
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 1px 3px 0px rgb(139, 113, 255);
+    transition-duration: .3s;
+    position: absolute;
+    top: 74%;
+    left: 17%;
+  }
+  
+  .cartIcon {
+    width: 14px;
+    height: fit-content;
+  }
+  
+  .cartIcon path {
+    fill: white;
+  }
+  
+  .button:active {
+    transform: translate(2px ,0px);
+    box-shadow: 0px 1px 0px rgb(139, 113, 255);
+    padding-bottom: 1px;
+  }
+  section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+  .about{
+    width: 100%;
+    height: 980px;
+    padding: 50px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards; 
+   
+  }
+.about .clothes h1{
+font-size:  70px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 35px 0;
+
+  }
+.about .clothes p{
+    text-align: center;
+    margin: 20px 0;
+    color: gray;
+    font-size: 25px;
+}
+.about .clothes-box {
+  
+   
+    width: 100px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr); /* Updated grid to have two columns */
+    grid-gap: 20px;
+
+}
+
+.about .clothes-box .clothes-card {
+    width: 100%; /* Adjusted card width to fit within the grid */
+    border: black solid;
+    background: rgb(141, 141, 141);
+    padding: 25px 25px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.about .clothes-box .clothes-card:hover{
+    box-shadow: 8px 8px 8px rgb(42, 42, 42);
+}
+.about .clothes-box .clothes-card:hover h1 {
+    font-size: 24px;
+    transition: 0.3s;
+}
+.about .clothes-box .clothes-card:hover img{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+
+.about .clothes-box img{
+    width: 250px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+
+
+.about .clothes-box .clothes-card h1{
+    font-size: 28px;
+    color: rgb(189, 226, 226);
+    margin: 15px 0px ;
+    
+}
+.about .clothes-box .clothes-card span{
+  color: #558167;
+  font-size: 16px;
+}
+.about .clothes-box .clothes-card p{
+  text-align: center;
+    font-size: 13px;
+    color: rgb(214, 215, 215);
+    
+    margin: 5px 0px ;
+}
+
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  /*HONE AL T8YEER KELLO*/
+
+
+
+
+
+
+
+
+  @media only screen and (max-width: 768px) {
+    
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Products Animation */
+    .about .clothes-box {
+        opacity: 0;
+        animation: slideUp 1.5s ease-in-out forwards;
+    }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .login-message {
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    /* Image Animation */
+    .mashito img {
+        opacity: 0;
+        animation: slideIn 1.5s ease-in-out forwards;
+    }
+    
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+  
+    section header {
+      background-color: #FFD1DC; /* Light pink background */
+    }
+    section header {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    body {
+      background-color: #E6E6FA; /* Lavender or light purple background */
+    }
+    .about {
+      background-color: #F0F8FF; /* Alice Blue or another light blue background */
+    }
+    .line {
+      position: absolute;
+      top: 92%;
+      width: 100%; /* Adjust the width of the line */
+      height: 15px; /* Adjust the thickness of the line */
+      background: linear-gradient(to bottom, black, white);
+    }
+ 
+   
+    section header .logo {
+        margin: 15px 0;
+    }
+
+    section .texts h1{
+        font-size: 40px;
+    }
+    section{
+        
+        height: 100%;
+        margin: 0px 0px 0px 0px;
+       
+    }
+   .mashito{
+    position: relative;
+        top: 10%;
+        left: 39%;
+   }
+    
+    .mashito img {
+        width: 89%;
+        height: auto;
+        
+    }
+    body {
+        font-family: 'Open Sans', sans-serif; /* Use the Google Fonts Open Sans */
+    }
+   
+    .login-message {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-size: 1.5em; /* Increase font size for better visibility */
+        position: absolute;
+        top: 15%; /* Adjust the top position */
+        width: 80%; /* Adjust the width to make it centered */
+        left: 10%; /* Center the login message */
+    }
+
+    .login-message h2 {
+        font-size: 18px; /* Increase font size for better readability */
+        margin: 10px 0; /* Add some margin for better spacing */
+        color: #555; /* Change color to a darker shade for better contrast */
+    }
+
+    /* Update font styles for better readability */
+    body, h1, h2, h3, p, a {
+        font-family: 'Arial', sans-serif; /* Change to a more common font */
+        color: #333; /* Set a darker color for better contrast */
+    }
+
+    
+
+    
+    section p{
+        font-size: 20px;
+    }
+ 
+    .button {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .button {
+        left: 0;
+    }
+    section .mahmoud img{
+        position: relative;
+        width: 89%;
+        height: auto;
+  
+        left: 37.5%;
+        
+    }
+
+    section .texts h1
+  {
+        position: absolute;
+        top: 250%;
+        left: 0;
+        font-size: 15px;
+    margin-bottom: 20px;
+    line-height: 1; /* Adjust the line-height value */
+
+    }
+    
+
+    section p {
+        width: 100%;
+    }  
+    login-message {
+       
+        margin-bottom: 20px;
+        color: #333; /* Change the color of the text */
+        font-size: 1.5em;
+        position: absolute;
+        top: 15%;
+        width: 80%;
+        left: 10%;
+        
+       
+    }
+    
+    .login-message h2 {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #555;
+    }
+    
+    .login-message p {
+        font-size: 16px; /* Adjust font size as needed */
+        margin-left: 20px; /* Adjust margin as needed */
+        line-height: 1.5; /* Adjust line height for better readability */
+    }
+    
+    /* Adjust <br> tags for better spacing */
+    .message2 {
+        font-family: 'Arial', sans-serif; /* Change the font family to Arial or another desired font */
+        color: #333; /* Change the text color as needed */
+    }
+    
+    .message2 p {
+        font-size: 15px;
+        line-height: 1.1;
+        letter-spacing: 1px;
+    }
+    .message2 span{
+        color: red;
+        text-shadow: #000;
+        font-weight: bolder; 
+    }
+    
+    .message2 b {
+        font-size: 18px;
+        letter-spacing: 0.2px;
+        text-decoration: underline; /* Change the text decoration if needed */
+        color: #555; /* Change the color of bold text as needed */
+    }
+    .btn-conteiner {
+        display: flex;
+        justify-content: center;
+        --color-text: white;
+        --color-background: #7869ea;
+        --color-outline: #8d5aed80;;
+        --color-shadow: #00000080;
+        position: absolute;
+        top: 60%;
+        left: 6%;
+      }
+      
+      .btn-content {
+        display: flex;
+        align-items: center;
+        padding: 3px 10px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--color-text);
+        background: var(--color-background);
+        transition: 1s;
+        border-radius: 70px;
+        box-shadow: 0 0 0.2em 0 var(--color-background);
+      }
+      
+      .btn-content:hover, .btn-content:focus {
+        transition: 0.5s;
+        -webkit-animation: btn-content 1s;
+        animation: btn-content 1s;
+        outline: 0.1em solid transparent;
+        outline-offset: 0.2em;
+        box-shadow: 0 0 0.4em 0 var(--color-background);
+      }
+      
+      .btn-content .icon-arrow {
+        transition: 0.5s;
+        margin-right: 0px;
+        transform: scale(0.6);
+      }
+      
+      .btn-content:hover .icon-arrow {
+        transition: 0.5s;
+        margin-right: 25px;
+      }
+      
+      .icon-arrow {
+        width: 20px;
+        margin-left: 15px;
+        position: relative;
+        top: 6%;
+      }
+        
+      /* SVG */
+      #arrow-icon-one {
+        transition: 0.4s;
+        transform: translateX(-60%);
+      }
+      
+      #arrow-icon-two {
+        transition: 0.5s;
+        transform: translateX(-30%);
+      }
+      
+      .btn-content:hover #arrow-icon-three {
+        animation: color_anim 1s infinite 0.2s;
+      }
+      
+      .btn-content:hover #arrow-icon-one {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.6s;
+      }
+      
+      .btn-content:hover #arrow-icon-two {
+        transform: translateX(0%);
+        animation: color_anim 1s infinite 0.4s;
+      }
+      
+      /* SVG animations */
+      @keyframes color_anim {
+        0% {
+          fill: white;
+        }
+      
+        50% {
+          fill: var(--color-background);
+        }
+      
+        100% {
+          fill: white;
+        }
+      }
+      
+      /* Button animations */
+      @-webkit-keyframes btn-content {
+        0% {
+          outline: 0.2em solid var(--color-background);
+          outline-offset: 0;
+        }
+      }
+      
+      @keyframes btn-content {
+        0% {
+          outline: 0.2em solid var(--color-background);
+          outline-offset: 0;
+        }
+        
+      }
+
+    
+    
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    .about {
+        height: auto;
+        
+    }
+
+    .about .clothes h1 {
+        font-size: 40px;
+       
+        margin-bottom: 5px;
+    }
+
+    .about .clothes p {
+        font-size: 25px;
+        margin: 10px 0;
+    }
+   
+
+    .about .clothes-box {
+     
+        grid-template-columns: repeat(2, 1fr); /* Updated to have two columns for mobile screens */
+        grid-gap: 1px; /* Added a small gap between cards */
+        margin-left: 10px;
+       
+    }
+    
+
+    .about .clothes-box .clothes-card {
+        height: 100%;
+
+        width: 200px; /* Adjusted width to fit two cards with a 1px margin */
+        margin: 3px; /* Added margin for spacing between cards */
+    }
+
+    .about .clothes-box .clothes-card img {
+        width: 120px; /* Make the image take the full width of its container */
+       
+    }
+    .about .clothes-box .clothes-card h1{
+        font-size: 18px;
+        
+    }
+    .about .clothes-box .clothes-card a{
+        text-decoration: none;
+    }
+    .read-more-link {
+        color: rgb(28, 64, 226); /* Blue text color */
+        text-decoration: none; /* Remove underline from the link */
+        font-size: 14px; /* Adjusted font size */
+    }
+    
+    /* Optional: Add hover effect */
+    .read-more-link:hover {
+        color: rgb(29, 23, 212); /* Darker blue text color on hover */
+    }
+    .about .incs{
+        position: absolute;
+        left: 27%;
+        top: 89.5%;
+    }
+    .about .incs img{
+      
+        width: 60px;
+        height: auto;
+        margin-bottom: 100px;
+      
+    }
+    .incs img:hover  {
+        animation: spin .25s linear infinite; /* Adjust the duration and timing function as needed */
+    }
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+
+    .about .clothes-box .clothes-card {
+        background-color: #ADD8E6; /* Light Blue */
+    }
+    .about .clothes-box .clothes-card h1,
+.about .clothes-box .clothes-card a,
+.about .clothes-box .clothes-card p {
+    color: #333; /* Dark Gray */
+}
+.about .clothes-box .clothes-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Animation when in the viewport */
+.about .clothes-box .clothes-card.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@keyframes cardBackgroundAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.about .clothes-box .clothes-card {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    background-size: 200% 200%;
+    animation: cardBackgroundAnimation 5s infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.footer-animated.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer-content {
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #333; /* Change background color */
+    font-family: 'Arial', sans-serif; /* Change font family */
+}
+
+.footer-content p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.footer-content ul li {
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+.footer-content a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size as needed */
+}
+
+/* Subscription Form Animation */
+.subscription-form {
+    display: flex;
+    align-items: center;
+}
+
+.subscription-form input {
+    padding: 8px; /* Adjust padding as needed */
+    margin-right: 8px; /* Adjust margin as needed */
+    border: 1px solid #fff;
+    font-size: 14px; /* Adjust font size as needed */
+    animation: fadeInInput 1s ease-out; /* Input box animation */
+}
+
+@keyframes fadeInInput {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.subscription-form button {
+    padding: 8px 15px; /* Adjust padding as needed */
+    background-color: #555; /* Change the color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* Adjust font size as needed */
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.subscription-form button:hover {
+    background-color: #777; /* Change the color on hover */
+}
+}
